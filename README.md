@@ -7,4 +7,13 @@ Then, the logo should snap into place (In this case, the center piece);
 And lastly follow up with an animated launch of the video;
 <img width="1919" height="877" alt="Screenshot 2025-07-27 013444" src="https://github.com/user-attachments/assets/dfcff3c3-270d-47e7-b8c4-cc4a9671d7f4" />
 
+How to run:
+It is recommended to install an extension on VSC called "Live Server"
+<img width="876" height="188" alt="image" src="https://github.com/user-attachments/assets/e85dce4a-9ac2-4477-8a7a-ec3576c9be4b" />
+Then right-click and select "Open with Live Server".
+<img width="1088" height="813" alt="image" src="https://github.com/user-attachments/assets/c401976e-adc2-4ae9-94ad-4b7191f5b0c3" />
+This process helps with the active development of the captcha.
+
+Or you can just open the html file. Like legit, it's that simple.
+
 This developement is dropped due to not being part of the team anymore.
