@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: url("background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: sans-serif;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#captcha-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#puzzle-hole {
+  position: absolute;
+  width: 318px;
+  height: 159px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 0 10px #0004 inset;
+  z-index: 2;
+}
+
+#puzzle-piece {
+  position: absolute;
+  width: 318px;
+  height: 159px;
+  bottom: 40px;
+  left: 40px;
+  cursor: grab;
+  z-index: 3;
+  transition: box-shadow 0.2s;
+}
+
+#puzzle-piece:active {
+  cursor: grabbing;
+  box-shadow: 0 0 12px #0007;
+}
+
+/* Wave + Ripple effect cuz its cool. XD */
+#wave {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.9) 15%, transparent 80%);
+  opacity: 0;
+  pointer-events: none;
+  display: none;
+  animation: wave 1.2s ease-out forwards;
+  z-index: 1000;
+  filter: blur(4px);
+}
+
+@keyframes wave {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(12);
+    opacity: 0;
+  }
+}
+
+#ripple {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  border: 3px solid rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1500;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
+}
+
+/*@
+keyframes ripple-animation {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    width: 2000px;
+    height: 2000px;
+    opacity: 0;
+  }
+} 
+*/
+
+@keyframes ripple-animation {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(20);
+    opacity: 0;
+  }
+}
+
+#intro-video {
+  width: 100%;
+  height: auto;
+  max-width: 1000px;
+  z-index: 2000;
+  display: block;
+  margin: auto;
+  padding-top: 50px;
+}
